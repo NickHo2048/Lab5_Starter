@@ -1,6 +1,7 @@
 // expose.js
 
 window.addEventListener('DOMContentLoaded', init);
+const jsConfetti = new JSConfetti();
 
 function init() {
   // TODO
@@ -51,7 +52,7 @@ function init() {
   butt.addEventListener('click', function(){
     //console.log("butt");
     audio = document.querySelector("audio");
-    console.log(name);
+    //onsole.log(name);
     if (name == "air-horn"){
       audio.src = "assets/audio/air-horn.mp3";
       //audio.volume = num/100;
@@ -63,6 +64,8 @@ function init() {
       audio.play();
     }
     else if (name == "party-horn"){
+
+      jsConfetti.addConfetti();
       audio.src = "assets/audio/party-horn.mp3";
       //audio.volume = num/100;
       audio.play();
